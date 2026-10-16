@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Trabalhos</title>
+
+
+    <link rel="stylesheet" href="../static/css/estilo.css">
+    <link rel="stylesheet" href="../static/css/historico_trabalho.css">
+</head>
+
+
+<body>
+
+
+    <div class="header">
+
+
+        <img class="logo_branca" src="../static/img/logo_branca.png" alt="Logo">
+
+
+        <div class="inicio_relatorio_previsao">
+            <a href="index.html">Início</a>
+            <a href="#">Relatórios</a>
+            <a href="#">Previsões</a>
+        </div>
+
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+            <div class="nome_user">Olá, {{nome }}</div>
+            <a href="#" class="logout">
+                <img src="../static/img/logout.png" alt="Sair">
+            </a>
+        </div>
+
+
+    </div>
+
+
+    <main>
+
+
+        <div class="barra_pesquisa">
+            <form>
+                <div class="icone_pesquisa">
+                    <img src="../static/img/lupa.png" alt="Pesquisar">
+                </div>
+
+
+
+
+                <input type="text" placeholder="Pesquisar">
+
+
+
+
+                <button type="submit">
+                    <img src="../static/img/lupa.png" alt="Buscar">
+                </button>
+            </form>
+        </div>
+
+
+
+
+        <div class="historico">
+
+
+            <h3>Histórico de Dias Trabalhados</h3>
+
+
+            <table id="tabela">
+
+
+                <tr>
+                    <th>Data</th>
+                    <th>Pacotes coletados</th>
+                    <th>Trabalhadores</th>
+                    <th>Total recebido</th>
+                    <th>Ações</th>
+                </tr>
+
+                {% for servico_diario in registros %}
+                    <tr>
+                        <td>{{ servico_diario[1] }}</td>
+                        <td>{{ servico_diario[2] }}</td>
+                        <td>{{ servico_diario[3] }}</td>
+                        <td>R$ {{ servico_diario[4] }}</td>
+                        <td>
+                            <a href="{{ url_for('editar_registro', id=servico_diario[0]) }}"
+                               class="editar">Editar</a>
+
+                            <a href="{{ url_for('trabalho_diario') }}" class="excluir">Excluir</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+
+        <a href="url_for(trabalho_diario)" class="novo">+ Novo Produto</a>
+
+
+        <a href="cadastro.html" class="adicionar"></a>
+
+
+    </main>
+
+
+</body>
+</html>

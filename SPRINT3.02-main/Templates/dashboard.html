@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+
+
+<body class="pagina-dashboard">
+
+
+    <div class="header">
+        <img class="logo_branca" src="../static/img/logo_branca.png" alt="Logo">
+
+
+        <div class="inicio_relatorio_previsao">
+            <p>Início</p>
+            <p>Relatório</p>
+            <p>Previsão</p>
+        </div>
+
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+
+
+            <a href="editar_usuario.html">
+                <p class="nome_user">Olá, {{ nome }} </p>
+            </a>
+
+
+            <a href="login.html" class="logout">
+                <img src="../static/img/logout.png" alt="Símbolo de sair">
+            </a>
+        </div>
+    </div>
+
+
+
+<div class="financeiro">
+
+
+    <h2>Bem-vindo(a), {{ nome }}</h2>
+    <p>Aqui está um resumo das suas finanças.</p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+            <div class="icone">＋</div>
+            <div>
+                <h4>Receitas</h4>
+                <h1>R$ 3.450,00</h1>
+                <p>+12% em relação ao mês anterior</p>
+            </div>
+        </div>
+
+
+        <div class="card despesas">
+            <div class="icone">+</div>
+            <div>
+                <h4>Despesas</h4>
+                <h1>R$ 1.980,00</h1>
+                <p>8% em relação ao mês anterior</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="icone ">+</div>
+
+
+            <div>
+                <h4>Saldo</h4>
+                <h1>R$ 1.470,00</h1>
+                <p>20% em relação ao mês anterior</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="botões">
+    <a href="#" class="novo">Registrar trabalho diário</a>
+    <a href="#" class="novo">Cadastrar serviço extra</a>
+    <a href="#" class="novo">Registrar receitas e despesas</a>
+
+
+</div>
+
+
+</body>
+</html>

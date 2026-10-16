@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cadastrar Receita ou Despesa</title>
+   <link rel="stylesheet" href="../static/css/receitas_e_despesas.css">
+</head>
+
+
+
+
+<body>
+
+
+
+
+   <div class="header">
+
+
+
+
+       <img class="logo_branca" src="../static/img/logo_branca.png" alt="Logo">
+
+
+
+
+       <div class="inicio_relatorio_previsao">
+           <a href="index.html">Início</a>
+           <a href="#">Relatórios</a>
+           <a href="#">Previsões</a>
+       </div>
+
+
+
+
+       <div class="usuario">
+           <div class="icone_user"></div>
+           <p>Olá {{ nome }}</p>
+           <a href="{{ url_for('logout') }}" class="logout">
+               <img src="../static/img/logout.png" alt="Sair">
+           </a>
+       </div>
+
+
+
+
+   </div>
+
+
+
+
+   <main>
+
+
+
+
+       <div class="esquerda">
+           <img src="../static/img/logo.png" alt="Meu Salário">
+       </div>
+
+
+
+
+       <div class="direita">
+
+
+
+
+           <a href="index.html" class="voltar">⟵ Voltar</a>
+
+
+
+
+           <div class="formulario">
+
+
+
+
+               <div class="titulo">
+                   <span class="mais">+</span>
+                   <h2>Cadastrar Receita ou Despesa</h2>
+               </div>
+
+
+
+
+               <p class="descricao-titulo">
+                   Adicione uma nova movimentação financeira para manter seu controle em dia.
+               </p>
+
+
+
+
+               <form action="" method="post">
+
+
+
+
+                   <div class="linha">
+
+
+
+
+                       <div class="campo">
+                           <label for="tipo">Tipo</label>
+                           <select name="tipo" id="tipo" required>
+                               <option value="">Selecione um tipo</option>
+                               <option value="Receita">Receita</option>
+                               <option value="Despesa">Despesa</option>
+                           </select>
+                       </div>
+
+
+
+
+                       <div class="campo">
+                           <label for="categoria">Categoria</label>
+                           <select name="categoria" id="categoria" required>
+                               <option value="">Selecione uma categoria</option>
+                               <option value="Alimentação">Alimentação</option>
+                               <option value="Transporte">Transporte</option>
+                               <option value="Salário">Salário</option>
+                               <option value="Outros">Outros</option>
+                           </select>
+                       </div>
+
+
+
+
+                   </div>
+
+
+
+
+                   <div class="linha">
+
+
+
+
+                       <div class="campo">
+                           <label for="data">Data</label>
+                           <input type="date" name="data" id="data" required>
+                       </div>
+
+
+
+
+                       <div class="campo">
+                           <label for="descricao">Descrição</label>
+                           <input type="text" name="descricao" id="descricao"
+                                  placeholder="Exemplo" required>
+                       </div>
+
+
+
+
+                   </div>
+
+
+
+
+                   <div class="linha">
+
+
+
+
+                       <div class="campo">
+                           <label for="valor">Valor</label>
+                           <input type="number" name="valor" id="valor"
+                                  placeholder="R$ 0,00" min="0.01"
+                                  step="0.01" required>
+                       </div>
+
+
+
+
+                       <div class="campo botao">
+                           <button type="submit">Salvar</button>
+                       </div>
+
+
+
+
+                   </div>
+
+
+
+
+               </form>
+
+
+
+
+           </div>
+
+
+
+
+       </div>
+
+
+
+
+   </main>
+
+
+
+
+</body>
+</html>

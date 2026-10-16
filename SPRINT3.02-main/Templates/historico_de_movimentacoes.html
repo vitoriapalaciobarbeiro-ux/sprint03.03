@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico De Movimentações</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/historico_de_movimentacoes.css">
+</head>
+<body>
+    <div class="header">
+        <img class="logo_branca" src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="">
+
+
+        <div class="inicio_relatorio_previsao">
+            <a href="#">Início</a>
+            <a href="#">Relatório</a>
+            <a href="#">Previsão</a>
+        </div>
+
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+            <a href="{{ url_for('editar_usuario') }}"><p class="nome_user">Olá, {{nome}}</p></a>
+            <a href="{{ url_for('logout') }}" class="logout"><img src="{{ url_for('static', filename='img/logout.png') }}" alt="Símbolo de sair"></a>
+        </div>
+
+
+    </div>
+
+
+    <div class="barra_pesquisa">
+        <form>
+            <div class="icone_pesquisa">
+                <img src="{{ url_for('static', filename='img/lupa.png') }}" alt="Pesquisar">
+            </div>
+
+
+            <input type="text" placeholder="Pesquisar">
+
+
+            <button type="submit">
+                <img src="{{ url_for('static', filename='img/lupa.png') }}" alt="Buscar">
+            </button>
+        </form>
+    </div>
+
+
+    <div class="historico">
+
+
+
+
+            <h3>Histórico de Movimentações</h3>
+
+
+
+
+            <table id="tabela">
+
+
+
+
+                <tr>
+                    <th>Data</th>
+                    <th>Tipo</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+
+
+
+
+                <tr>
+                    <td>16/10/2026</td>
+                    <td>Receita</td>
+                    <td>Salário</td>
+                    <td>Trabalho</td>
+                    <td>R$ 3.450</td>
+                    <td>
+                        <button class="editar" >Editar</button>
+                        <button class="excluir" >Excluir</button>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td>17/10/2026</td>
+                    <td>Despesa</td>
+                    <td>Supermercado</td>
+                    <td>Alimentção</td>
+                    <td>R$ 320,45</td>
+                    <td>
+                        <a class="editar" >Editar</a>
+                        <a class="excluir" >Excluir</a>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>18/10/2026</td>
+                    <td>Serviço Extra</td>
+                    <td>Aula Particular</td>
+                    <td>Educação</td>
+                    <td>R$ 150</td>
+                    <td>
+                        <a class="editar" href="{{ url_for('excluir_registro') }}" >Editar</a>
+                        <a class="excluir" >Excluir</a>
+                    </td>
+                </tr>
+            </table>
+    </div>
+
+
+    <a href="#" class="novo">+ Nova Movimentação</a>
+
+
+</body>
+</html>

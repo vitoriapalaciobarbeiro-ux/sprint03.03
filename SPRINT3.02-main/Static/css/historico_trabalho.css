@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+:root {
+    --principal: #0D7C4E;
+    --branco: #FFFFFF;
+    --neutro: #1F2937;
+    --neutro_secundario: #6B7280;
+    --fundo_claro: #F7FAF8;
+}
+
+
+body {
+    color: var(--neutro);
+    background: var(--branco);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+.header {
+    width: 100%;
+    height: 67px;
+    background: var(--principal);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+
+.logo_branca {
+    width: 90px;
+}
+
+
+.inicio_relatorio_previsao {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    margin-left: 60px;
+}
+
+
+.inicio_relatorio_previsao a {
+    color: var(--branco);
+    font-size: 14px;
+
+}
+
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.icone_user {
+    width: 20px;
+    height: 20px;
+    background: var(--branco);
+    border-radius: 50%;
+}
+
+
+.usuario p {
+    color: var(--branco);
+    font-size: 9px;
+}
+
+
+.logout img {
+    width: 28px;
+    display: block;
+}
+
+
+
+
+body {
+    background-color: var(--fundo_claro);
+}
+
+
+.barra_pesquisa {
+    width: 60%;
+    height: 40px;
+    margin: 2% auto 0;
+    border: 2px solid #C9EDDF;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(13, 124, 78, 0.10);
+}
+
+
+
+
+.barra_pesquisa form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    border: none;
+}
+
+
+
+
+.barra_pesquisa .icone_pesquisa {
+    width: 35px;
+    height: 35px;
+    margin-left: 12px;
+    border-radius: 50%;
+    background-color: #E5F6EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.barra_pesquisa .icone_pesquisa img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+
+
+.barra_pesquisa input {
+    flex: 1;
+    /* usamos flex: 1 no input para que o campo de pesquisa se estenda entre a lupa e o botão verde, sem precisar definir uma largura fixa. */
+    min-width: 0;
+    height: 75%;
+    border: none;
+    border-left: 2px solid #E1E5E9;
+    outline: none;
+    /* para tirar a borda preta feia */
+    padding-left: 20px;
+    background: transparent;
+    font-size: 15px;
+}
+
+
+
+
+.barra_pesquisa button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+
+.barra_pesquisa button img {
+    display: block;
+    width: 23px;
+    height: 23px;
+    max-width: 23px;
+    max-height: 23px;
+    filter: brightness(0) invert(1);
+    /* troca a imagem de preto pra branco */
+}
+
+
+
+
+.barra_pesquisa button:hover {
+    background-color: #095E3B;
+}
+
+
+
+
+.historico {
+    width: 92%;
+    height: 360px;
+    margin: 45px;
+    margin-left: 4%;
+    background-color: white;
+    border: 2px solid #DDF7E7;
+    border-radius: 6px;
+
+
+}
+
+
+.historico h3 {
+    color: var(--principal);
+    font-size: 14px;
+    padding: 15px 20px 8px;
+    text-align: center;
+}
+
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: white(225, 50, 50);
+    border: 1px solid var(--borda);
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+th {
+    background-color: #DDF7E7;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid var(--borda);
+
+}
+
+
+.editar {
+    background-color: var(--principal);
+    color: white;
+    border: none;
+    padding: 6px 9px;
+    border-radius: 5px;
+    width: 69px;
+    height: 30px;
+}
+
+
+.excluir {
+    background-color: #FF4545;
+    color: white;
+    border: none;
+    padding: 6px 9px;
+    border-radius: 5px;
+    width: 69px;
+    height: 30px;
+}
+
+
+#cadastrar{
+    display: none;
+}
+
+
+#editor{
+    display: none;
+}
+
+
+.novo {
+    background-color: var(--principal);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-left: 80%;
+}
